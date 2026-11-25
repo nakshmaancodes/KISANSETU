@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: kisansetu-ai
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: TINYFISH_API_KEY
+        sync: false
+      - key: WEATHER_API_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: NOMINATIM_USER_AGENT
+        value: KisanSetuAI/3.0 (production@kisansetu.ai)

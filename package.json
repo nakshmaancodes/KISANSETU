@@ -1,0 +1,20 @@
+{
+  "name": "setu-ai",
+  "version": "4.0.0",
+  "description": "SETU AI — Unified Environmental (VayuSetu) & Agricultural (KisanSetu) Intelligence Platform powered by Gemini, TinyFish & Real-Time Weather/AQI",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test/api.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

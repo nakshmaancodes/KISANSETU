@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "type": "service",
+        "service": "kisansetu-ai"
+      }
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/monitor",
+      "schedule": "0 6 * * *"
+    }
+  ],
+  "services": {
+    "kisansetu-ai": {
+      "root": ".",
+      "entrypoint": "server.js",
+      "buildCommand": "npm install"
+    }
+  }
+}
